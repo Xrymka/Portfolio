@@ -1,0 +1,27 @@
+// main: ../style.less
+
+.social {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-bottom: 42px;
+}
+
+.social__link {
+    margin-right: 10px;
+    text-decoration: none;
+    
+    transition: translateY 0.2s linear;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    & img {
+        width: 41px;
+        height: 41px;
+        border-radius: 8px;
+    }
+}

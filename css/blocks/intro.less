@@ -1,0 +1,101 @@
+// main: ../style.less
+
+.intro {
+    margin-top: 19px;
+    
+    @media @mobile {
+        margin-top: 100px;
+    }
+}
+
+.intro__inner {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    position: relative;
+    
+    background: url("../img/symbols.png") no-repeat bottom right;
+    border-bottom: 1px solid fade(@gray, 30%);
+    
+    @media @tablet {
+        background-size: 420px auto;
+    }
+    
+    @media @mobile {
+        background: url("../img/symbols.png") no-repeat bottom right -10%;
+        background-size: 350px auto;
+
+    }
+    
+    @media @mobile-sm {
+        background: none;
+    }
+}
+
+.intro__content {
+    padding-top: 4.6rem;
+    padding-bottom: 8.27rem;
+    width: 50%;
+    
+    @media @tablet {
+        padding-top: 2.4rem;
+        padding-bottom: 6.6rem;
+    }
+    
+    @media @mobile {
+        width: 65%;
+    }
+    
+    @media @mobile-sm {
+        width: 100%;
+    }
+}
+
+.intro__subtitle {
+    font-size: 2.13rem;
+    color: @black;
+    font-weight: 200;
+    
+    @media @tablet {
+        font-size: 1.5rem;
+    }
+}
+
+.intro__title {
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    margin-bottom: 5px;
+    
+    @media @tablet {
+        font-size: 2rem;
+    }
+}
+
+.intro__prof {
+    margin-bottom: 26px;
+    font-size: 1.2em;
+    color: fade(@black, 70%);
+}
+
+.intro__photo {
+    position: absolute;
+    bottom: 0px;
+    right: 75px;
+    z-index: 1;
+    
+    @media @tablet {
+        max-height: 400px;
+    }
+    
+    @media @mobile {
+        max-height: 380px;
+        right: 0px;
+    }
+    
+    @media @mobile-sm {
+        display: none;
+    }
+}

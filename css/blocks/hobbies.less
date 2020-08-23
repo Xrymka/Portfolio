@@ -1,0 +1,26 @@
+// main: ../style.less
+
+.hobbies {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    position: relative;
+    
+    @media @mobile-sm {
+        display: block;
+    }
+}
+
+.hobbies__icon {
+    width: 41px;
+    height: 41px;
+    border-radius: 8px;
+    
+    margin-right: 1.5rem;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,91 @@
+// main: ../style.less
+
+.nav {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    
+    @media @mobile {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1000;
+        background-color: @white;
+        box-shadow: 0px 5px 10px fade(#000, 24%);
+        text-align: center;
+        
+        display: none;
+        
+        &.show {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+    }
+}
+
+.nav__link {
+    margin-left: 2rem;
+    position: relative;
+    font-size: 0.93rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: @black;
+        
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+        
+        transition: width 0.2s linear;
+    }
+    
+    /* Modificators */
+    &:hover:not(&--hire) {
+        &:after {
+            width: 100%;
+        }
+    }
+    
+    &--hire {
+        padding: 0.66rem 2rem;
+        border: 2px solid @black;
+        border-radius: 20px;
+        
+        transition: background-color 0.2s linear, color 0.2s linear, box-shadow 0.2s linear;
+        
+        &:hover {
+            color: @white;
+            background-color: @black;
+            box-shadow: 2px 2px 10px fade(#000, 24%);
+        }
+    }
+    
+    @media @tablet {
+        margin-left: 1.8rem;
+    }
+    
+    @media @mobile {
+        width: 100%;
+        margin-left: 0;
+        padding: .5rem 1rem;
+    }
+}

@@ -1,0 +1,85 @@
+// main: ../style.less
+
+.contact {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    background: url(../img/me_1.png) right 10% bottom no-repeat;
+    background-size: contain;
+    
+    @media @mobile {
+        background: url(../img/me_1.png) right bottom no-repeat;
+        background-size: contain;
+    }
+    
+    @media @mobile-sm {
+        background: url(../img/me_transparent.png) center bottom no-repeat;
+        background-size: contain;
+    }
+}
+
+.contact__left {
+    width: 47.7%;
+    padding: 2rem;
+    
+    @media @mobile {
+        width: 60%;
+    }
+    
+    @media @mobile-sm {
+        width: 100%;
+    }
+}
+
+.contact__info {
+    margin: 2rem 0 3rem;
+    padding: 0;
+    list-style: none;
+    
+    font-size: .94rem;
+    color: @black;
+    font-weight: 300;
+    
+    & img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    @media @mobile-sm {
+        margin: 1rem 0 2rem;
+    }
+}
+
+.contact__info-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    & a:hover {
+        font-weight: 700;
+    }
+    
+    @media @mobile-sm {
+        font-size: .7rem;
+    }
+}
+
+.contact__info-icon {
+    margin-right: 0.75rem;
+}

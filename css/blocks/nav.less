@@ -56,6 +56,10 @@
         z-index: 1;
         
         transition: width 0.2s linear;
+        
+        @media @mobile {
+            bottom: -2px;
+        }
     }
     
     /* Modificators */
@@ -76,6 +80,10 @@
             color: @white;
             background-color: @black;
             box-shadow: 2px 2px 10px fade(#000, 24%);
+        }
+        
+        @media @mobile {
+            margin-top: .5rem;
         }
     }
     

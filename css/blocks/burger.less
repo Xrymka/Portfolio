@@ -1,21 +1,75 @@
 // main: ../style.less
 
 .burger {
-    padding: 0;
-    padding-right: 1rem;
+    width: 40px;
+    padding: 10px 0;
+    
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    
     border: 0;
     background: none;
     outline: none;
 }
 
-.burger_img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    
+.burger__item {
     display: none;
+    width: 100%;
+    height: 3px;
+    background-color: #2B2A2C;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    
+    font-size: 0;
+    color: transparent;
+    
+    transition: background .2s linear;
     
     @media @mobile {
         display: block;
     }
+}
+
+.burger.active .burger__item {
+    background: none;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    
+    background-color: #2B2A2C;
+    
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    
+    transition: transform .2s linear;
+}
+
+.burger__item:before {
+    top: -10px;
+}
+
+.burger__item:after {
+    bottom: -10px;
+}
+
+.burger.active .burger__item:before {
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(-5px);
+}
+
+.burger.active .burger__item:after {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(-5px);
 }

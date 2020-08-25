@@ -34,6 +34,10 @@ $(function() {
     }); 
     
     
+    /* Smooth Scroll
+    ====================== */
+
+    
     /* Modal
     ====================== */
     
@@ -132,8 +136,20 @@ $(function() {
     navToggle.on("click", function(event) {
         event.preventDefault();
         
+        $(this).toggleClass("active");
         nav.toggleClass("show");
     });
+    
+    
+    /* Load more
+    ====================== */
+    
+    $('.portfolio__col').slice(0, 3).show();
+    $('#loadMore').on('click', function(event) {
+        event.preventDefault();
+        
+        $('.portfolio__col:hidden').slice(0, 3).sliceDown();
+    })
     
 });
 

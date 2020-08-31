@@ -144,12 +144,31 @@ $(function() {
     /* Load more
     ====================== */
     
-    $('.portfolio__col').slice(0, 3).show();
-    $('#loadMore').on('click', function(event) {
-        event.preventDefault();
-        
-        $('.portfolio__col:hidden').slice(0, 3).sliceDown();
-    })
+    if ($(window).width() > 765) {
+        $('.portfolio__col').slice(0, 3).show();
+        $('#loadMore').on('click', function(event) {
+            event.preventDefault();
+
+            $('.portfolio__col:hidden').slice(0, 3).slideDown();
+            if ($('.portfolio__col:hidden').length == 0) {
+                $('#loadMore').hide();
+            };
+        });
+    };
+    
+    if ($(window).width() < 765) {
+        $('.portfolio__col').slice(0, 2).show();
+        $('#loadMore').on('click', function(event) {
+            event.preventDefault();
+
+            
+            $('.portfolio__col:hidden').slice(0, 2).slideDown();
+            if ($('.portfolio__col:hidden').length == 0) {
+                $('#loadMore').hide();
+            };
+        });
+    };
+    
     
 });
 

@@ -37,6 +37,19 @@ $(function() {
     /* Smooth Scroll
     ====================== */
 
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        var $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top - 140;
+
+        $("html, body").animate({
+            scrollTop:  blockOffset
+        }, 500);
+        
+    });
+    
     
     /* Modal
     ====================== */
@@ -140,6 +153,17 @@ $(function() {
         nav.toggleClass("show");
     });
     
+    $("body").on("click", function(event) {
+        event.preventDefault();
+    
+        if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
+           ! nav.is(event.target) && nav.has(event.target).length === 0)
+            {
+                navToggle.removeClass("active");
+                nav.removeClass("show");
+            };
+    });
+        
     
     /* Load more
     ====================== */

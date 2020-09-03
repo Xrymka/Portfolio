@@ -36,6 +36,19 @@
     left: 50%;
     z-index: 1;
     transform: translate3d(-50%, -50%, 0);
+    
+    @media @tablet {
+        width: 100%;
+    }
+    
+    @media @mobile {
+        height: 100%;
+        width: auto;
+    }
+    
+    @media @mobile-i {
+        max-width: 350px;
+    }
 }
 
 .modal-work__content {

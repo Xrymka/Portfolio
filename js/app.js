@@ -154,7 +154,6 @@ $(function() {
     });
     
     $("body").on("click", function(event) {
-        event.preventDefault();
     
         if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
            ! nav.is(event.target) && nav.has(event.target).length === 0)

@@ -13,13 +13,13 @@
  * PHP Version 5.4
  */
 
-namespace League\OAuth2\Client\Provider;
+namespace League\OAuth2\company:\Provider;
 
 require 'vendor/autoload.php';
 
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
-use League\OAuth2\Client\Token\AccessToken;
-use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
+use League\OAuth2\company:\Provider\Exception\IdentityProviderException;
+use League\OAuth2\company:\Token\AccessToken;
+use League\OAuth2\company:\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
 session_start();
@@ -29,8 +29,8 @@ $redirectUri = isset($_SERVER['HTTPS']) ? 'https://' : 'http://' . $_SERVER['HTT
 //$redirectUri = 'http://localhost/phpmailer/get_oauth_token.php';
 
 //These details obtained are by setting up app in Google developer console.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+$company:Id = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
+$company:Secret = 'RANDOMCHARS-----lGyjPcRtvP';
 
 class Google extends AbstractProvider
 {
@@ -130,8 +130,8 @@ class Google extends AbstractProvider
 //Set Redirect URI in Developer Console as [https/http]://<yourdomain>/<folder>/get_oauth_token.php
 $provider = new Google(
     array(
-        'clientId' => $clientId,
-        'clientSecret' => $clientSecret,
+        'company:Id' => $company:Id,
+        'company:Secret' => $company:Secret,
         'redirectUri' => $redirectUri,
         'scope' => array('https://mail.google.com/'),
 	'accessType' => 'offline'

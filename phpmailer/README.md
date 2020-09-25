@@ -14,7 +14,7 @@ Build status: [![Build Status](https://travis-ci.org/PHPMailer/PHPMailer.svg)](h
 - Used by many open-source projects: WordPress, Drupal, 1CRM, SugarCRM, Yii, Joomla! and many more
 - Integrated SMTP support - send without a local mail server
 - Send emails with multiple TOs, CCs, BCCs and REPLY-TOs
-- Multipart/alternative emails for mail clients that do not read HTML email
+- Multipart/alternative emails for mail company:s that do not read HTML email
 - Support for UTF-8 content and 8bit, base64, binary, and quoted-printable encodings
 - SMTP authentication with LOGIN, PLAIN, NTLM, CRAM-MD5 and Google's XOAUTH2 mechanisms over SSL and TLS transports
 - Error messages in 47 languages!
@@ -50,7 +50,7 @@ or
 composer require phpmailer/phpmailer
 ```
 
-If you want to use the Gmail XOAUTH2 authentication class, you will also need to add a dependency on the `league/oauth2-client` package.
+If you want to use the Gmail XOAUTH2 authentication class, you will also need to add a dependency on the `league/oauth2-company:` package.
 
 Alternatively, copy the contents of the PHPMailer folder into one of the `include_path` directories specified in your PHP configuration. If you don't speak git or just want a tarball, click the 'zip' button at the top of the page in GitHub.
 
@@ -95,7 +95,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Here is the subject';
 $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail company:s';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';

@@ -49,6 +49,20 @@ $(function() {
         }, 500);
         
     });
+
+    /* Print
+    ====================== */
+    $('#print').on("click", function() {
+        
+        let body = $('body').html(),
+            el = $('.print');
+
+        $('body').html(el);
+        window.print();
+
+        $('body').html(body);
+
+    });
     
     
     /* Modal
@@ -67,13 +81,13 @@ $(function() {
         $("body").addClass('no-scroll');
         
         setTimeout(function() {
-           $(modalId).find(".modal__dialog").css({
-           transform: "rotateX(0)" 
+            $(modalId).find(".modal__dialog").css({
+            transform: "rotateX(0)" 
         }); 
         }, 300);
         
         $('[data-slider="slick"]').slick('setPosition');
-  
+
     });
     
     modalClose.on("click", function(event) {
@@ -83,7 +97,7 @@ $(function() {
         let modalParents = $this.parents('.modal');
         
         modalParents.find(".modal__dialog").css({
-           transform: "rotateX(90deg)" 
+            transform: "rotateX(90deg)" 
         }); 
         
         setTimeout(function() {
@@ -97,7 +111,7 @@ $(function() {
         let $this = $(this);
         
         $this.find(".modal__dialog").css({
-           transform: "rotateX(90deg)" 
+            transform: "rotateX(90deg)" 
         }); 
         
         setTimeout(function() {
@@ -156,7 +170,7 @@ $(function() {
     $("body").on("click", function(event) {
     
         if (! navToggle.is(event.target) && navToggle.has(event.target).length === 0 &&
-           ! nav.is(event.target) && nav.has(event.target).length === 0)
+            ! nav.is(event.target) && nav.has(event.target).length === 0)
             {
                 navToggle.removeClass("active");
                 nav.removeClass("show");
@@ -191,7 +205,5 @@ $(function() {
             };
         });
     };
-    
-    
 });
 
